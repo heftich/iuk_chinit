@@ -1,0 +1,14 @@
+<Context>
+		
+	<!-- configuration for login authentication -->
+	<Realm 
+		className="org.apache.catalina.realm.JDBCRealm"
+	    driverName="org.postgresql.Driver"
+	   	connectionURL="jdbc:postgresql://localhost:5432/heftich"
+	    userTable="users" userNameCol="user_name" userCredCol="user_pass"
+	   	userRoleTable="user_roles" roleNameCol="role_name"
+	   	connectionName="postgres"
+	   	connectionPassword="password"
+    	/>
+</Context>
+

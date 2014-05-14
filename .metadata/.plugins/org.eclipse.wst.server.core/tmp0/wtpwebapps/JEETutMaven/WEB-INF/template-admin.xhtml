@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!--
+/*
+ * Main Template for the webapplication
+ */
+-->
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<h:outputStylesheet name="bootstrap-3.1.1/dist/css/bootstrap.css" />
+	<h:outputStylesheet name="bootstrap-3.1.1/dist/css/bootstrap-theme.css" />
+	<h:outputStylesheet name="styles.css" />
+	<title>JSF Composite Component</title>
+</h:head>
+
+<h:body>
+
+	<div class="container">
+		<div class="header">
+			<ul class="nav nav-pills pull-right">
+				<li>
+					<h:form>  	
+						<h:commandLink value="Logout" action="#{loginBean.logout}" />
+					</h:form>
+				</li>
+			</ul>
+			<ui:insert name="top">
+				<h1>Admin: #{loginBean.userName}</h1>
+			</ui:insert>
+		</div>
+
+		<div class="center_content">
+
+			<div class="col-lg-6">
+				<ui:insert name="content-left">Welcome</ui:insert>
+			</div>
+
+			<div class="col-lg-6">
+				<ui:insert name="content-right">Content Right</ui:insert>
+			</div>
+		</div>
+
+		<div class="footer">
+			<ui:insert name="bottom">Model Webapplikationen - Beispielanwendung</ui:insert>
+		</div>
+	</div>
+</h:body>
+</html>

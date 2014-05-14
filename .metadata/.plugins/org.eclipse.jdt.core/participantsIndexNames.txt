@@ -1,0 +1,3 @@
+INDEX VERSION 1.126
+/home/chinit/Desktop/GitWorkspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/291235680.index
+/chinit_01/src/main/resources
