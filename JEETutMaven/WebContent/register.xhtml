@@ -1,0 +1,119 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+	<body>
+
+<ui:composition template="resources/template.xhtml">
+
+	<ui:define name ="content-right">
+		<h:form styleClass="form-horizontal" role="form" style="width:60%">
+			<div class="form-group">
+				<h:outputLabel styleClass="col-sm-2 control-label" for="nachname">Nachname</h:outputLabel>
+				<div class="col-sm-8">
+					<h:inputText id="nachname" styleClass="form-control"
+						value="#{nutzerCreateController.nutzer.nachname}"></h:inputText>
+				</div>
+				<h:message for="nachname" style="color:red" />
+			</div>
+			
+			<div class="form-group">
+				<h:outputLabel styleClass="col-sm-2 control-label" for="vorname">Vorname</h:outputLabel>
+				<div class="col-sm-8">
+					<h:inputText id="vorname" styleClass="form-control"
+						value="#{nutzerCreateController.nutzer.vorname}"></h:inputText>
+				</div>
+				<h:message for="vorname" style="color:red" />
+			</div>
+			
+			<div class="form-group">
+				<h:outputLabel styleClass="col-sm-2 control-label" for="username">Username</h:outputLabel>
+				<div class="col-sm-8">
+					<h:inputText id="username" styleClass="form-control"
+						value="#{nutzerCreateController.nutzer.username}"></h:inputText>
+				</div>
+				<h:message for="username" style="color:red" />
+			</div>
+			
+			<div class="form-group">
+				<h:outputLabel styleClass="col-sm-2 control-label" for="passwort">Passwort</h:outputLabel>
+				<div class="col-sm-8">
+					<h:inputText id="passwort" styleClass="form-control"
+						value="#{nutzerCreateController.nutzer.passwort}"></h:inputText>
+				</div>
+				<h:message for="passwort" style="color:red" />
+			</div>
+			
+			<div class="form-group">
+				<h:outputLabel styleClass="col-sm-2 control-label" for="strasse">Strasse</h:outputLabel>
+				<div class="col-sm-8">
+					<h:inputText id="strasse" styleClass="form-control"
+						value="#{nutzerCreateController.nutzer.strasse}"></h:inputText>
+				</div>
+				<h:message for="strasse" style="color:red" />
+			</div>
+			
+			<div class="form-group">
+				<h:outputLabel styleClass="col-sm-2 control-label" for="hausnummer">Hausnummer</h:outputLabel>
+				<div class="col-sm-8">
+					<h:inputText id="hausnummer" styleClass="form-control"
+						value="#{nutzerCreateController.nutzer.hausnummer}"></h:inputText>
+				</div>
+				<h:message for="hausnummer" style="color:red" />
+			</div>
+			
+			<div class="form-group">
+				<h:outputLabel styleClass="col-sm-2 control-label" for="postleitzahl">Postleitzahl</h:outputLabel>
+				<div class="col-sm-8">
+					<h:inputText id="postleitzahl" styleClass="form-control"
+						value="#{nutzerCreateController.nutzer.postleitzahl}"></h:inputText>
+				</div>
+				<h:message for="postleitzahl" style="color:red" />
+			</div>
+			
+			<div class="form-group">
+				<h:outputLabel styleClass="col-sm-2 control-label" for="ort">Ort</h:outputLabel>
+				<div class="col-sm-8">
+					<h:inputText id="ort" styleClass="form-control"
+						value="#{nutzerCreateController.nutzer.ort}"></h:inputText>
+				</div>
+				<h:message for="ort" style="color:red" />
+			</div>
+			
+			<div class="form-group">
+				<h:outputLabel styleClass="col-sm-2 control-label" for="land">Land</h:outputLabel>
+				<div class="col-sm-8">
+					<h:inputText id="land" styleClass="form-control"
+						value="#{nutzerCreateController.nutzer.land}"></h:inputText>
+				</div>
+				<h:message for="land" style="color:red" />
+			</div>
+			
+			<div class="form-group">
+				<h:outputLabel styleClass="col-sm-2 control-label" for="email">Email</h:outputLabel>
+				<div class="col-sm-8">
+					<h:inputText id="email" styleClass="form-control"
+						value="#{nutzerCreateController.nutzer.email}"></h:inputText>
+				</div>
+				<h:message for="email" style="color:red" />
+			</div>
+			
+			<div class="form-group">
+				<div class="col-sm-offset-2 col-sm-10">
+					<h:commandButton styleClass="btn btn-default" value="Save"
+						action="#{nutzerCreateController.saveNutzer}"></h:commandButton>
+					<h:button styleClass="btn btn-default" value="Cancel"
+						outcome="cancel"></h:button>
+				</div>
+			</div>
+		</h:form>
+	</ui:define>
+<!-- 	<ui:define name="footer"> -->
+<!-- 	    Add your footer here or delete to use the default -->
+<!-- 	</ui:define> -->
+</ui:composition>
+</body>
+</html>

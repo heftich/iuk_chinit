@@ -1,27 +1,18 @@
-<?xml version='1.0' encoding='UTF-8' ?>
-<!--
-/*
- * Login form for the webapplication
- */
--->
-<!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
-	xmlns:f="http://java.sun.com/jsf/core"
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
 	xmlns:h="http://java.sun.com/jsf/html"
-	xmlns:ui="http://java.sun.com/jsf/facelets">
+	xmlns:f="http://java.sun.com/jsf/core">
+	<body>
 
-<h:head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<h:outputStylesheet name="bootstrap-3.1.1/dist/css/bootstrap.css" />
-	<h:outputStylesheet name="bootstrap-3.1.1/dist/css/bootstrap-theme.css" />
-	<h:outputStylesheet name="styles.css" />
-	<title>Login</title>
-</h:head>
-<h:body>
+<ui:composition template="resources/template.xhtml">
 
-	<div class="container">
+	<ui:define name ="content-right">
+	   <div class="container">
 
-		<h:form class="form-signin" id="login-form">
+		<h:form class="form-signin" id="login-form" style="width:40%">
            <h:outputText value="username:"/>
            <h:inputText class="form-control" value="#{loginBean.userName}" id="username"/>
            <br/>
@@ -31,7 +22,14 @@
            <h:commandButton class="btn btn-lg btn-primary btn-block" id="button" value="Login" action="#{loginBean.login}"/>
            <h:messages />
            <br/>
+           <h1>Noch keinen Account?</h1>
+           <a href="register.xhtml">register now</a>
         </h:form>
     </div>
-</h:body>
+	</ui:define>
+<!-- 	<ui:define name="footer"> -->
+<!-- 	    Add your footer here or delete to use the default -->
+<!-- 	</ui:define> -->
+</ui:composition>
+</body>
 </html>
