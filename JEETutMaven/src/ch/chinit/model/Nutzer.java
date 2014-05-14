@@ -38,6 +38,8 @@ public class Nutzer implements Serializable {
 	private String username;
 
 	private String vorname;
+	
+	private String passwort;
 
 	//bi-directional many-to-one association to Lo
 	@OneToMany(mappedBy="nutzer")
@@ -132,6 +134,14 @@ public class Nutzer implements Serializable {
 
 	public void setVorname(String vorname) {
 		this.vorname = vorname;
+	}
+	
+	public String getPasswort() {
+		return this.passwort;
+	}
+	
+	public void setPasswort(String passwort) {
+		this.passwort = passwort;
 	}
 
 	public List<Los> getLos() {

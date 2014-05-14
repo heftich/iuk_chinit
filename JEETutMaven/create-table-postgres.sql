@@ -39,7 +39,8 @@ CREATE TABLE nutzer
 	ort VARCHAR(30),
 	land VARCHAR(30),
 	email VARCHAR(30) NOT NULL,
-	avatar TEXT
+	avatar TEXT,
+	passwort VARCHAR(40) NOT NULL;
 );
 
 CREATE TABLE kategorien
