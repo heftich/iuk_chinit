@@ -52,6 +52,7 @@ public class NutzerLoginController extends AbstractController {
 			}
 			
 		}
+		getEntityManager().getTransaction().commit();
 		
 		return status;
 	}

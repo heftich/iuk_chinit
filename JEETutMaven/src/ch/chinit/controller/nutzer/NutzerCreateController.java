@@ -53,6 +53,7 @@ public class NutzerCreateController extends AbstractController {
 			state = false;	
 			}	
 		}
+		getEntityManager().getTransaction().commit();
 		return state;
 	}
 	
