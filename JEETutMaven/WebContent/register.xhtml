@@ -14,7 +14,7 @@
 			<div class="form-group">
 				<h:outputLabel styleClass="col-sm-2 control-label" for="nachname">Nachname</h:outputLabel>
 				<div class="col-sm-8">
-					<h:inputText id="nachname" styleClass="form-control"
+					<h:inputText onClick="this.select();" id="nachname" styleClass="form-control"
 						value="#{nutzerCreateController.nutzer.nachname}"></h:inputText>
 				</div>
 				<h:message for="nachname" style="color:red" />

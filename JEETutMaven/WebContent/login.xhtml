@@ -13,18 +13,17 @@
 	   <div class="container">
 
 		<h:form class="form-signin" id="login-form" style="width:40%">
-           <h:outputText value="username:" />
-           <h:inputText class="form-control" value="#{loginBean.userName}" id="username"/>
+           <h:outputText value="Username" />
+           <h:inputText class="form-control" value="#{nutzerLoginController.nutzer.username}" id="username"/>
            <br/>
-           <h:outputText value="password:"/>
-           <h:inputSecret class="form-control" value="#{loginBean.password}" id="password"/>
+           <h:outputText value="Passwort"/>
+           <h:inputSecret class="form-control" value="#{nutzerLoginController.nutzer.passwort}" id="passwort"/>
            <br/>
-           <h:commandButton class="btn btn-lg btn-primary btn-block" id="button" value="Login" action="#{loginBean.login}"/>
+           <h:commandButton class="btn btn-lg btn-primary btn-block" id="button" value="Login" action="#{nutzerLoginController.loginNutzer}"/>
            <h:messages />
            <br/>
-           <h1>Noch keinen Account?</h1>
-           
-           <a href="register.xhtml">register now</a>
+           <h4>Noch keinen Account? Jetzt anmelden.</h4>
+           <a href="register.xhtml">Registrieren</a>
         </h:form>
     </div>
 	</ui:define>
