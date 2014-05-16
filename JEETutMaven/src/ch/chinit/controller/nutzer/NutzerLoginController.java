@@ -26,6 +26,7 @@ public class NutzerLoginController extends AbstractController {
 	@PostConstruct
 	protected void postConstruct() 
 	{
+		nutzer = new Nutzer();
 		nutzer.setUsername("<enter username>");
 		nutzer.setPasswort("<enter passwort>");
 		
@@ -55,5 +56,15 @@ public class NutzerLoginController extends AbstractController {
 		getEntityManager().getTransaction().commit();
 		
 		return status;
+	}
+	
+	public Nutzer getNutzer() 
+	{
+		return nutzer;
+	}
+	
+	public void setNutzer(Nutzer nutzer) 
+	{
+		this.nutzer = nutzer;
 	}
 }
