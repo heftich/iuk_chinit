@@ -1,9 +1,10 @@
 DROP TABLE IF EXISTS users; 
-DROP TABLE IF EXISTS user_roles; 
-DROP TABLE IF EXISTS nutzer;
-DROP TABLE IF EXISTS kategorien;
-DROP TABLE IF EXISTS artikel;
+DROP TABLE IF EXISTS user_roles;
 DROP TABLE IF EXISTS los;
+DROP TABLE IF EXISTS artikel;
+DROP TABLE IF EXISTS kategorien;
+DROP TABLE IF EXISTS nutzer;
+
 
 DROP SEQUENCE IF EXISTS user_id_seq;
 
@@ -40,7 +41,7 @@ CREATE TABLE nutzer
 	land VARCHAR(30),
 	email VARCHAR(30) NOT NULL,
 	avatar TEXT,
-	passwort VARCHAR(40) NOT NULL;
+	passwort VARCHAR(40) NOT NULL
 );
 
 CREATE TABLE kategorien
@@ -78,20 +79,34 @@ ALTER TABLE los ADD FOREIGN KEY (user_id) REFERENCES nutzer(user_id);
 ALTER TABLE los ADD FOREIGN KEY (artikel_id) REFERENCES artikel(artikel_id);
 
 
-INSERT INTO nutzer (nachname, vorname, username, strasse, hausnummer, postleitzahl, ort, land, email, avatar)
-    VALUES ('Frehner', 'Deny', 'frehde', 'Belmontsrasse', '8', '7000', 'Chur', 'Schweiz', 'defreh@frehde.de', 'none');
-    
-   
-INSERT INTO nutzer (nachname, vorname, username, strasse, hausnummer, postleitzahl, ort, land, email, avatar)
-    VALUES ('Hefti', 'Christian', 'chefti', 'Tittwiesentrasse', '42', '7000', 'Chur', 'Schweiz', 'chefti@chef.ti', 'none');
+INSERT INTO nutzer (nachname, vorname, username, strasse, hausnummer, postleitzahl, ort, land, email, avatar, passwort)
+    VALUES ('Frehner', 'Deny', 'frehde', 'Belmontsrasse', '8', '7000', 'Chur', 'Schweiz', 'defreh@frehde.de', 'none', 'frehde');
+       
+INSERT INTO nutzer (nachname, vorname, username, strasse, hausnummer, postleitzahl, ort, land, email, avatar, passwort)
+    VALUES ('Hefti', 'Christian', 'chefti', 'Tittwiesentrasse', '42', '7000', 'Chur', 'Schweiz', 'chefti@chef.ti', 'none', 'chefti');
 
 INSERT INTO kategorien (kat_name, icon) 
 	VALUES ('Games', 'none');
 
 INSERT INTO kategorien (kat_name, icon) 
-	VALUES ('Buecher', 'none');
+	VALUES ('Books', 'none');
+	
+INSERT INTO kategorien (kat_name, icon) 
+	VALUES ('Apps', 'none');
+	
+INSERT INTO kategorien (kat_name, icon) 
+	VALUES ('Movies', 'none');
+	
+INSERT INTO kategorien (kat_name, icon) 
+	VALUES ('Newspaper', 'none');
 	
 INSERT INTO artikel (art_name, preis, slots, bild, beschreibung, kategorie, verkauft) 
 	VALUES ('Fifa 98', '10.0', '8', 'none', 'Viel zu alt, daher gut', '1','false');
+	
+INSERT INTO artikel (art_name, preis, slots, bild, beschreibung, kategorie, verkauft) 
+	VALUES ('Buchblub', '11.8', '8', 'none', 'Isch zuppa', '2','false');
+	
+INSERT INTO artikel (art_name, preis, slots, bild, beschreibung, kategorie, verkauft) 
+	VALUES ('NHL 2014', '100.0', '8', 'none', 'Awesome', '1','false');
 
 
