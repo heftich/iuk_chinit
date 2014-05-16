@@ -12,14 +12,26 @@
 		<ui:define name="content-right">
 			<h:form>
 				<h:dataTable class="table"
-					value="#{nutzerListController.nutzerlist}" var="nutzerlist">
+					value="#{kategorieArtikelListController.artikellistgames}"
+					var="artikellistgames">
 					<h:column>
-						<ul>
-							<li>Coffee</li>
-							<li>Milk</li>
-						</ul>
-					</h:column>
-				</h:dataTable>
+						<f:facet name="header">Bild</f:facet>
+					#{artikellistgames.bild}
+    			</h:column>
+					<h:column>
+						<f:facet name="header">Artikelname</f:facet>
+					#{artikellistgames.artName}
+    			</h:column>
+ 					<h:column>
+    					<f:facet name="header">Preis</f:facet>
+					#{artikellistgames.preis}
+    			</h:column>
+					<h:column>
+						<f:facet name="header">Beschreibung</f:facet>
+					#{artikellistgames.beschreibung}
+    			</h:column>
+    			
+    			</h:dataTable>
 			</h:form>
 		</ui:define>
 		<!-- 	<ui:define name="footer"> -->

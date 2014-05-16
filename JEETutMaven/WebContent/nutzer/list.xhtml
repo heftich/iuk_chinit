@@ -5,23 +5,24 @@
 	xmlns:ui="http://java.sun.com/jsf/facelets"
 	xmlns:h="http://java.sun.com/jsf/html"
 	xmlns:f="http://java.sun.com/jsf/core">
-	<body>
+<body>
 
-<ui:composition template="../resources/template.xhtml">
+	<ui:composition template="../resources/template.xhtml">
 
-	<ui:define name ="content-right">
-	   <h:form>
-			<h:dataTable class="table" value="#{nutzerListController.nutzerlist}" var="nutzerlist">
-				<h:column>
-					<f:facet name="header">Vorname</f:facet>
+		<ui:define name="content-right">
+			<h:form>
+				<h:dataTable class="table"
+					value="#{nutzerListController.nutzerlist}" var="nutzerlist">
+					<h:column>
+						<f:facet name="header">Vorname</f:facet>
 					#{nutzerlist.vorname}
     			</h:column>
-			</h:dataTable>
-		</h:form>
-	</ui:define>
-<!-- 	<ui:define name="footer"> -->
-<!-- 	    Add your footer here or delete to use the default -->
-<!-- 	</ui:define> -->
-</ui:composition>
+				</h:dataTable>
+			</h:form>
+		</ui:define>
+		<!-- 	<ui:define name="footer"> -->
+		<!-- 	    Add your footer here or delete to use the default -->
+		<!-- 	</ui:define> -->
+	</ui:composition>
 </body>
 </html>
