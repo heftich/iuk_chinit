@@ -45,6 +45,7 @@ public class NutzerCreateController extends AbstractController {
 		TypedQuery<Nutzer> query = getEntityManager().createQuery(
 				"SELECT n FROM Nutzer n", Nutzer.class);
 		nutzerlist = query.getResultList();		
+		getEntityManager().getTransaction().commit();
 		
 		for ( Nutzer n : nutzerlist)
 		{
@@ -53,7 +54,7 @@ public class NutzerCreateController extends AbstractController {
 			state = false;	
 			}	
 		}
-		getEntityManager().getTransaction().commit();
+		
 		return state;
 	}
 	
@@ -69,12 +70,14 @@ public class NutzerCreateController extends AbstractController {
 	
 	public String saveNutzer() 
 	{
+
 		if(isNewUsername(nutzer)) 
 		{
 		getEntityManager().getTransaction().begin();
 		getEntityManager().persist(nutzer);
 		getEntityManager().getTransaction().commit();
 		return "save";
+		
 		}
 		
 		else 

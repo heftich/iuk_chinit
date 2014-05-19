@@ -50,10 +50,10 @@ public class NutzerLoginController extends AbstractController {
 			if(n.getUsername().equals(nutzer.getUsername())&& n.getPasswort().equals(nutzer.getPasswort())) 
 			{
 			status = "ok";
+			
 			}
 			
 		}
-		getEntityManager().getTransaction().commit();
 		
 		return status;
 	}
