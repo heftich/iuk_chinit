@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+<body>
+
+	<ui:composition template="../resources/template.xhtml">
+
+		<ui:define name="content-right">
+			<h:form>
+				<h:dataTable class="table"
+					value="#{startController.artikelliststart}"
+					var="artikelliststart">
+					<h:column>
+						<f:facet name="header">Bild</f:facet>
+					#{artikelliststart.bild}
+    			</h:column>
+					<h:column>
+						<f:facet name="header">Artikelname</f:facet>
+					#{artikelliststart.artName}
+    			</h:column>
+ 					<h:column>
+    					<f:facet name="header">Preis</f:facet>
+					#{artikelliststart.preis}
+    			</h:column>
+					<h:column>
+						<f:facet name="header">Beschreibung</f:facet>
+					#{artikelliststart.beschreibung}
+    			</h:column>
+    				<h:column>
+    					<h:button name="action" value="send">1</h:button>
+    					<h:button name="action" value="send">2</h:button>
+    			</h:column>
+    			<h:column>
+    					<h:button name="action" value="send">3</h:button>
+    					<h:button name="action" value="send">4</h:button>
+    			</h:column>
+    			<h:column>
+    					<h:button name="action" value="send">5</h:button>
+    					<h:button name="action" value="send">6</h:button>
+    			</h:column>
+    			<h:column>
+    					<h:button name="action" value="send">7</h:button>
+    					<h:button name="action" value="send">8</h:button>
+    			</h:column>
+    			
+    			</h:dataTable>
+			</h:form>
+		</ui:define>
+		<!-- 	<ui:define name="footer"> -->
+		<!-- 	    Add your footer here or delete to use the default -->
+		<!-- 	</ui:define> -->
+	</ui:composition>
+</body>
+</html>
