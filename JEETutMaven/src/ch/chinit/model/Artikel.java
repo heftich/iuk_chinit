@@ -31,7 +31,7 @@ public class Artikel implements Serializable {
 
 	private String slots;
 
-	private Boolean verkauft;
+	private Integer status;
 
 	//bi-directional many-to-one association to Kategorien
 	@ManyToOne
@@ -93,12 +93,12 @@ public class Artikel implements Serializable {
 		this.slots = slots;
 	}
 
-	public Boolean getVerkauft() {
-		return this.verkauft;
+	public Integer getStatus() {
+		return this.status;
 	}
 
-	public void setVerkauft(Boolean verkauft) {
-		this.verkauft = verkauft;
+	public void setVerkauft(Integer status) {
+		this.status = status;
 	}
 
 	public Kategorien getKategorien() {
