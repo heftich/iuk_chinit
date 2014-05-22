@@ -28,7 +28,7 @@ public class StartController extends AbstractController {
 	protected void postConstruct() {
 		getEntityManager().getTransaction().begin();
 		TypedQuery<Artikel> queryStart = getEntityManager().createQuery(
-				"SELECT a FROM Artikel a WHERE status=1", Artikel.class);
+				"SELECT a FROM Artikel a WHERE status=0", Artikel.class);
 
 		artikelliststart = queryStart.getResultList();
 		
