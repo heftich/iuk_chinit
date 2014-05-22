@@ -60,7 +60,7 @@ CREATE TABLE artikel
 	bild TEXT,
 	beschreibung TEXT,
 	kategorie integer NOT NULL,
-	verkauft BOOLEAN NOT NULL
+	status integer NOT NULL
 );
 
 CREATE TABLE los
@@ -100,13 +100,37 @@ INSERT INTO kategorien (kat_name, icon)
 INSERT INTO kategorien (kat_name, icon) 
 	VALUES ('Newspaper', 'none');
 	
-INSERT INTO artikel (art_name, preis, slots, bild, beschreibung, kategorie, verkauft) 
-	VALUES ('Fifa 98', '10.0', '8', 'none', 'Viel zu alt, daher gut', '1','false');
+INSERT INTO artikel (art_name, preis, slots, bild, beschreibung, kategorie, status) 
+	VALUES ('Fifa 98', '10.0', '8', 'none', 'Viel zu alt, daher gut', '1','0');
+
+INSERT INTO artikel (art_name, preis, slots, bild, beschreibung, kategorie, status) 
+	VALUES ('NHL 2014', '100.0', '8', 'none', 'Awesome', '1','0');
 	
-INSERT INTO artikel (art_name, preis, slots, bild, beschreibung, kategorie, verkauft) 
-	VALUES ('Buchblub', '11.8', '8', 'none', 'Isch zuppa', '2','false');
+INSERT INTO artikel (art_name, preis, slots, bild, beschreibung, kategorie, status) 
+	VALUES ('Harry Potter', '11.8', '8', 'none', 'Isch zuppa', '2','0');
 	
-INSERT INTO artikel (art_name, preis, slots, bild, beschreibung, kategorie, verkauft) 
-	VALUES ('NHL 2014', '100.0', '8', 'none', 'Awesome', '1','false');
+INSERT INTO artikel (art_name, preis, slots, bild, beschreibung, kategorie, status) 
+	VALUES ('Feuchtgebiete', '14.9', '8', 'none', 'FSK18', '2','0');
+	
+INSERT INTO artikel (art_name, preis, slots, bild, beschreibung, kategorie, status) 
+	VALUES ('Angry Birds', '3.2', '8', 'none', 'Vögel und Schweine', '3','0');
+	
+INSERT INTO artikel (art_name, preis, slots, bild, beschreibung, kategorie, status) 
+	VALUES ('Instagram', '2.5', '8', 'none', 'Fotos Social Media', '3','0');
+	
+INSERT INTO artikel (art_name, preis, slots, bild, beschreibung, kategorie, status) 
+	VALUES ('Pulp Fiction', '15', '8', 'none', 'Best Movie Evaaa and Eva', '4','0');
+	
+INSERT INTO artikel (art_name, preis, slots, bild, beschreibung, kategorie, status) 
+	VALUES ('Iron Man 2', '19', '8', 'none', 'Mit Robert Downey Junior', '4','0');
+	
+INSERT INTO artikel (art_name, preis, slots, bild, beschreibung, kategorie, status) 
+	VALUES ('Blick', '2.8', '8', 'none', 'Gaaaay', '5','0');
+	
+INSERT INTO artikel (art_name, preis, slots, bild, beschreibung, kategorie, status) 
+	VALUES ('Suedostschweiz', '1.8', '8', 'none', 'Bündner Nachrichten', '5','0');
+
+
+
 
 
