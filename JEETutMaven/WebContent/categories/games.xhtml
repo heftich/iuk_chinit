@@ -30,6 +30,10 @@
 						<f:facet name="header">Beschreibung</f:facet>
 					#{artikellistgames.beschreibung}
     			</h:column>
+					<h:column>
+
+						<h:commandButton action="#{kaufenController.kaufenAction}" name="action" value="Los kaufen" outcome="kaufen"></h:commandButton>
+					</h:column>
     			
     			</h:dataTable>
 			</h:form>

@@ -22,16 +22,20 @@
 						<f:facet name="header">Artikelname</f:facet>
 					#{artikellistbooks.artName}
     			</h:column>
- 					<h:column>
-    					<f:facet name="header">Preis</f:facet>
+					<h:column>
+						<f:facet name="header">Preis</f:facet>
 					#{artikellistbooks.preis}
     			</h:column>
 					<h:column>
 						<f:facet name="header">Beschreibung</f:facet>
 					#{artikellistbooks.beschreibung}
     			</h:column>
-    			
-    			</h:dataTable>
+					<h:column>
+
+						<h:commandButton action="#{kaufenController.kaufenAction}" name="action" value="Los kaufen" outcome="kaufen"></h:commandButton>
+					</h:column>
+
+				</h:dataTable>
 			</h:form>
 		</ui:define>
 		<!-- 	<ui:define name="footer"> -->

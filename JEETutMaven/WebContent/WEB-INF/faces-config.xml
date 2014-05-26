@@ -3,4 +3,44 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd"
 	version="2.2">
+		<navigation-rule>
+		<display-name>categories/apps.xhtml</display-name>
+		<from-view-id>/categories/apps.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>kaufen</from-outcome>
+			<to-view-id>/starttest/start.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+		<navigation-rule>
+		<display-name>categories/books.xhtml</display-name>
+		<from-view-id>/categories/books.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>kaufen</from-outcome>
+			<to-view-id>/starttest/start.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+		<navigation-rule>
+		<display-name>categories/games.xhtml</display-name>
+		<from-view-id>/categories/games.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>kaufen</from-outcome>
+			<to-view-id>/starttest/start.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+		<navigation-rule>
+		<display-name>categories/movies.xhtml</display-name>
+		<from-view-id>/categories/movies.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>kaufen</from-outcome>
+			<to-view-id>/starttest/start.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+		<navigation-rule>
+		<display-name>categories/newspaper.xhtml</display-name>
+		<from-view-id>/categories/newspaper.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>kaufen</from-outcome>
+			<to-view-id>/starttest/start.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
 </faces-config>

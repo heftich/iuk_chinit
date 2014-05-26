@@ -1,2 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<pageflow:Pageflow xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf13958410667990" configfile="/JEETutMaven/WebContent/WEB-INF/faces-config.xml"/>
+<pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf13958410667990" configfile="/JEETutMaven/WebContent/WEB-INF/faces-config.xml">
+  <nodes xsi:type="pageflow:PFPage" name="categories/apps.xhtml" id="pf140108795932431" referenceLink="//@navigationRule.0/@fromViewId|" outlinks="pf140108795932432" path="/categories/apps.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="starttest/start.xhtml" id="pf140108795932433" referenceLink="//@navigationRule.4/@navigationCase.0/@toViewId|" inlinks="pf140108795932432 pf140108805008634 pf140108805008635 pf140108805008636 pf140108805008637" path="/starttest/start.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="categories/books.xhtml" id="pf140108805008638" referenceLink="//@navigationRule.1/@fromViewId|" outlinks="pf140108805008634" path="/categories/books.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="categories/games.xhtml" id="pf140108805008639" referenceLink="//@navigationRule.2/@fromViewId|" outlinks="pf140108805008635" path="/categories/games.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="categories/movies.xhtml" id="pf140108805008640" referenceLink="//@navigationRule.3/@fromViewId|" outlinks="pf140108805008636" path="/categories/movies.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="categories/newspaper.xhtml" id="pf140108805008741" referenceLink="//@navigationRule.4/@fromViewId|" outlinks="pf140108805008637" path="/categories/newspaper.xhtml"/>
+  <links id="pf140108795932432" target="pf140108795932433" source="pf140108795932431" outcome="kaufen"/>
+  <links id="pf140108805008634" target="pf140108795932433" source="pf140108805008638" outcome="kaufen"/>
+  <links id="pf140108805008635" target="pf140108795932433" source="pf140108805008639" outcome="kaufen"/>
+  <links id="pf140108805008636" target="pf140108795932433" source="pf140108805008640" outcome="kaufen"/>
+  <links id="pf140108805008637" target="pf140108795932433" source="pf140108805008741" outcome="kaufen"/>
+</pageflow:Pageflow>
