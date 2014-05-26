@@ -16,7 +16,7 @@ public class Los implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Integer id;
 
 	private Boolean gewonnen;
@@ -24,7 +24,7 @@ public class Los implements Serializable {
 	private Integer losnr;
 
 	private Timestamp zeitstempel;
-
+	
 	//bi-directional many-to-one association to Artikel
 	@ManyToOne
 	@JoinColumn(name="artikel_id")

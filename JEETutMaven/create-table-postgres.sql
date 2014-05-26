@@ -69,7 +69,7 @@ CREATE TABLE los
 	user_id integer NOT NULL,
 	artikel_id integer NOT NULL,
 	losnr INTEGER NOT NULL,
-	zeitstempel TIMESTAMP WITHOUT TIME ZONE NOT NULL,
+	zeitstempel TIMESTAMP WITHOUT TIME ZONE,
 	gewonnen boolean
 );
 
@@ -107,31 +107,31 @@ INSERT INTO kategorien (kat_name, icon)
 	VALUES ('Newspaper', 'none');
 	
 INSERT INTO artikel (art_name, preis, slots, bild, beschreibung, kategorie, status) 
-	VALUES ('Fifa 98', '10.0', '8', 'none', 'Viel zu alt, daher gut', '1','0');
+	VALUES ('Fifa 98', '10.0', '8', 'none', 'Fussballspiel', '1','0');
 
 INSERT INTO artikel (art_name, preis, slots, bild, beschreibung, kategorie, status) 
-	VALUES ('NHL 2014', '100.0', '8', 'none', 'Awesome', '1','0');
+	VALUES ('NHL 2014', '100.0', '8', 'none', 'Eishockeyspiel', '1','0');
 	
 INSERT INTO artikel (art_name, preis, slots, bild, beschreibung, kategorie, status) 
-	VALUES ('Harry Potter', '11.8', '8', 'none', 'Isch zuppa', '2','0');
+	VALUES ('Harry Potter', '11.8', '8', 'none', 'Fantasy', '2','0');
 	
 INSERT INTO artikel (art_name, preis, slots, bild, beschreibung, kategorie, status) 
-	VALUES ('Feuchtgebiete', '14.9', '8', 'none', 'FSK18', '2','0');
+	VALUES ('Feuchtgebiete', '14.9', '8', 'none', 'Biographie', '2','0');
 	
 INSERT INTO artikel (art_name, preis, slots, bild, beschreibung, kategorie, status) 
 	VALUES ('Angry Birds', '3.2', '8', 'none', 'Vögel und Schweine', '3','0');
 	
 INSERT INTO artikel (art_name, preis, slots, bild, beschreibung, kategorie, status) 
-	VALUES ('Instagram', '2.5', '8', 'none', 'Fotos Social Media', '3','0');
+	VALUES ('Instagram', '2.5', '8', 'none', 'Social Media', '3','0');
 	
 INSERT INTO artikel (art_name, preis, slots, bild, beschreibung, kategorie, status) 
-	VALUES ('Pulp Fiction', '15', '8', 'none', 'Best Movie Evaaa and Eva', '4','0');
+	VALUES ('Pulp Fiction', '15', '8', 'none', 'Actionfilm', '4','0');
 	
 INSERT INTO artikel (art_name, preis, slots, bild, beschreibung, kategorie, status) 
-	VALUES ('Iron Man 2', '19', '8', 'none', 'Mit Robert Downey Junior', '4','0');
+	VALUES ('Iron Man 2', '19', '8', 'none', 'Superheldenfilm', '4','0');
 	
 INSERT INTO artikel (art_name, preis, slots, bild, beschreibung, kategorie, status) 
-	VALUES ('Blick', '2.8', '8', 'none', 'Gaaaay', '5','0');
+	VALUES ('Blick', '2.8', '8', 'none', 'Boulevardzeitung', '5','0');
 	
 INSERT INTO artikel (art_name, preis, slots, bild, beschreibung, kategorie, status) 
 	VALUES ('Suedostschweiz', '1.8', '8', 'none', 'Bündner Nachrichten', '5','0');
