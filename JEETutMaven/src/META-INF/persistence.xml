@@ -9,7 +9,8 @@
 		<class>ch.chinit.model.Los</class>
 		<class>ch.chinit.model.Nutzer</class>
 		<class>ch.chinit.model.UserRole</class>
-		<class>ch.chinit.model.UserRolePK</class>	
+		<class>ch.chinit.model.UserRolePK</class>
+		<class>ch.chinit.model.Nutzerrechte</class>	
 		
 		<properties>
 			<property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/webapp"/>

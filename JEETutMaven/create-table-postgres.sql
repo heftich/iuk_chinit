@@ -85,6 +85,12 @@ INSERT INTO nutzer (nachname, vorname, username, strasse, hausnummer, postleitza
 INSERT INTO nutzer (nachname, vorname, username, strasse, hausnummer, postleitzahl, ort, land, email, avatar, passwort)
     VALUES ('Hefti', 'Christian', 'chefti', 'Tittwiesentrasse', '42', '7000', 'Chur', 'Schweiz', 'chefti@chef.ti', 'none', 'chefti');
 
+INSERT INTO nutzerrechte (user_name, role_name)
+    VALUES ('frehde', 'ADMIN');
+    
+INSERT INTO nutzerrechte (user_name, role_name)
+    VALUES ('chefti', 'ADMIN');
+
 INSERT INTO kategorien (kat_name, icon) 
 	VALUES ('Games', 'none');
 

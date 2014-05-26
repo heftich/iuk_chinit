@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+	<head>
+		<title>User authenticated example</title>
+		
+	</head>
+	<body>
+		<ui:composition template="resources/template.xhtml">
+			
+			<ui:define name="login">
+					<div class="logincontainer" style="display:table;">
+		<div class="outerlogincont" style="display:table-row;">
+			<div class="piccontainer" style="display:table-cell; vertical-align:middle; background:white;">
+					<img src="chinit_logo.png" height="40" width="80"></img>
+			</div>
+			<div class="text" style="display:table-cell; vertical-align:middle;">
+					<p>Hans</p>
+					<p>Hans</p>		
+			</div>
+		</div>	
+	</div>
+			</ui:define>
+			
+			<ui:define name="content-right">
+				<p>User Admin area</p>
+			</ui:define>
+			
+		</ui:composition>
+	</body>
+</html>

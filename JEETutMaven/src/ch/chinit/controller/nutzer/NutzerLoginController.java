@@ -50,12 +50,13 @@ public class NutzerLoginController extends AbstractController {
 			if(n.getUsername().equals(nutzer.getUsername())&& n.getPasswort().equals(nutzer.getPasswort())) 
 			{
 			status = "ok";
+			System.out.println(status);
 			
 			}
 			
 		}
 		
-		return status;
+		return "admin/";
 	}
 	
 	public Nutzer getNutzer() 
