@@ -1,32 +1,10 @@
-DROP TABLE IF EXISTS users; 
-DROP TABLE IF EXISTS user_roles;
 DROP TABLE IF EXISTS los;
 DROP TABLE IF EXISTS artikel;
 DROP TABLE IF EXISTS kategorien;
 DROP TABLE IF EXISTS nutzer;
+DROP TABLE IF EXISTS nutzerrechte;
 
 
-DROP SEQUENCE IF EXISTS user_id_seq;
-
-CREATE SEQUENCE user_id_seq;
-
-CREATE TABLE users (
-    id INTEGER NOT NULL default nextval('user_id_seq'),
-    user_name VARCHAR(20) NOT NULL,
-    user_pass VARCHAR(50) NOT NULL
-);
-
-INSERT INTO users (user_name, user_pass)
-    VALUES ('admin', 'password');
-    
-CREATE TABLE user_roles (
-	user_name         VARCHAR(20) NOT NULL,
-  	role_name         VARCHAR(20) NOT NULL,
-  	primary key (user_name, role_name)
-);
-
-INSERT INTO user_roles (user_name, role_name)
-    VALUES ('admin', 'ADMIN');
 
 CREATE TABLE nutzer
 (
@@ -41,7 +19,7 @@ CREATE TABLE nutzer
 	land VARCHAR(30),
 	email VARCHAR(30) NOT NULL,
 	avatar TEXT,
-	passwort VARCHAR(40) NOT NULL
+	password VARCHAR(40) NOT NULL
 );
 
 CREATE TABLE kategorien
@@ -74,18 +52,32 @@ CREATE TABLE los
 	verkauft boolean
 );
 
+CREATE TABLE nutzerrechte
+(
+	username VARCHAR(20) NOT NULL,
+	role_name VARCHAR(20) NOT NULL,
+	CONSTRAINT user_roles_pkey PRIMARY KEY(username, role_name)
+);
+
+
 -- FOREIGN KEYS
 ALTER TABLE artikel ADD FOREIGN KEY (kategorie) REFERENCES kategorien(kateg_id);
 ALTER TABLE los ADD FOREIGN KEY (user_id) REFERENCES nutzer(user_id);
 ALTER TABLE los ADD FOREIGN KEY (artikel_id) REFERENCES artikel(artikel_id);
 
 
-INSERT INTO nutzer (nachname, vorname, username, strasse, hausnummer, postleitzahl, ort, land, email, avatar, passwort)
+INSERT INTO nutzer (nachname, vorname, username, strasse, hausnummer, postleitzahl, ort, land, email, avatar, password)
     VALUES ('Frehner', 'Deny', 'frehde', 'Belmontsrasse', '8', '7000', 'Chur', 'Schweiz', 'defreh@frehde.de', 'none', 'frehde');
        
-INSERT INTO nutzer (nachname, vorname, username, strasse, hausnummer, postleitzahl, ort, land, email, avatar, passwort)
+INSERT INTO nutzer (nachname, vorname, username, strasse, hausnummer, postleitzahl, ort, land, email, avatar, password)
     VALUES ('Hefti', 'Christian', 'chefti', 'Tittwiesentrasse', '42', '7000', 'Chur', 'Schweiz', 'chefti@chef.ti', 'none', 'chefti');
 
+INSERT INTO nutzerrechte (username, role_name)
+	VALUES ('frehde', 'ADMIN');
+
+INSERT INTO nutzerrechte (username, role_name)
+	VALUES ('chefti', 'ADMIN');   
+	
 INSERT INTO kategorien (kat_name, icon) 
 	VALUES ('Games', 'none');
 
