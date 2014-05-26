@@ -20,6 +20,8 @@ public class Los implements Serializable {
 	private Integer id;
 
 	private Boolean gewonnen;
+	
+	private Boolean verkauft;
 
 	private Integer losnr;
 
@@ -52,6 +54,14 @@ public class Los implements Serializable {
 
 	public void setGewonnen(Boolean gewonnen) {
 		this.gewonnen = gewonnen;
+	}
+	
+	public Boolean getVerkauft() {
+		return this.verkauft;
+	}
+
+	public void setVerkauft(Boolean verkauft) {
+		this.verkauft = verkauft;
 	}
 
 	public Integer getLosnr() {

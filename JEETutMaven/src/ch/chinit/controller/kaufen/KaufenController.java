@@ -1,5 +1,7 @@
 package ch.chinit.controller.kaufen;
 
+import java.util.Collection;
+
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ViewScoped;
 
@@ -13,19 +15,15 @@ import ch.chinit.model.Nutzer;
 public class KaufenController extends AbstractController {
 	
 	private Los los;
-	private Nutzer nutzer;
-
+	
 		
 	public String kaufenAction(Artikel artikel) 
 	{
-		nutzer = new Nutzer();
-		nutzer.setUserId(2);
-		los = new Los();
-		los.setGewonnen(false);
-		los.setLosnr(1);
-		los.setZeitstempel(null);
-		los.setArtikel(artikel);
-		los.setNutzer(nutzer);
+
+
+		Collection<Los> lose = artikel.getLos();
+		los = lose.iterator().next();
+		los.setVerkauft(true);
 		getEntityManager().getTransaction().begin();
 		getEntityManager().persist(los);
 		getEntityManager().getTransaction().commit();
@@ -34,7 +32,6 @@ public class KaufenController extends AbstractController {
 		getEntityManager().getTransaction().begin();
 		getEntityManager().persist(artikel);
 		getEntityManager().getTransaction().commit();
-		//System.out.println(artikel.getStatus());
 		return "kaufen";
 	}
 	
