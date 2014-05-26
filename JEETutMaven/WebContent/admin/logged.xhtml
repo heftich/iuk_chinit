@@ -6,7 +6,7 @@
 		
 	</head>
 	<body>
-		<ui:composition template="resources/template.xhtml">
+		<ui:composition template="../resources/template.xhtml">
 			
 			<ui:define name="login">
 					<div class="logincontainer" style="display:table;">
@@ -15,8 +15,8 @@
 					<img src="chinit_logo.png" height="40" width="80"></img>
 			</div>
 			<div class="text" style="display:table-cell; vertical-align:middle;">
-					<p>Hans</p>
-					<p>Hans</p>		
+					<p>Hallo, #{loginBean.userName}</p>
+
 			</div>
 		</div>	
 	</div>

@@ -28,7 +28,7 @@ public class NutzerLoginController extends AbstractController {
 	{
 		nutzer = new Nutzer();
 		nutzer.setUsername("<enter username>");
-		nutzer.setPasswort("<enter passwort>");
+		nutzer.setPassword("<enter passwort>");
 		
 	}
 	
@@ -47,7 +47,7 @@ public class NutzerLoginController extends AbstractController {
 		
 		for ( Nutzer n : nutzerlist)
 		{
-			if(n.getUsername().equals(nutzer.getUsername())&& n.getPasswort().equals(nutzer.getPasswort())) 
+			if(n.getUsername().equals(nutzer.getUsername())&& n.getPassword().equals(nutzer.getPassword())) 
 			{
 			status = "ok";
 			System.out.println(status);

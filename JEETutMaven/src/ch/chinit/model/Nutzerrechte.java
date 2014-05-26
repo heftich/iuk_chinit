@@ -22,7 +22,7 @@ public class Nutzerrechte implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 
 	
-	@Column(name="user_name")
+	@Column(name="username")
 	private String userName;
 
 	@Column(name="role_name")
@@ -56,6 +56,4 @@ public class Nutzerrechte implements Serializable {
 			this.userName.equals(castOther.userName)
 			&& this.roleName.equals(castOther.roleName);
 	}
-
-
 }

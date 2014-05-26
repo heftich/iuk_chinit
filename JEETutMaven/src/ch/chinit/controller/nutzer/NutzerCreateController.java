@@ -28,7 +28,7 @@ public class NutzerCreateController extends AbstractController {
 		nutzer.setUsername("<enter username>");
 		nutzer.setVorname("<enter vorname>");
 		nutzer.setNachname("<enter nachname>");
-		nutzer.setPasswort("<enter passwort>");
+		nutzer.setPassword("<enter passwort>");
 		nutzer.setEmail("<enter email>");
 		nutzer.setStrasse("<enter street>");
 		nutzer.setHausnummer("<enter hausnummer>");

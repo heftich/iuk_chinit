@@ -7,7 +7,7 @@
 	   	connectionURL="jdbc:postgresql://localhost:5432/webapp"
 	    userTable="nutzer" 
 	    userNameCol="username" 
-	    userCredCol="passwort"
+	    userCredCol="password"
 	   	userRoleTable="nutzerrechte" 
 	   	roleNameCol="role_name"
 	   	connectionName="postgres"
