@@ -97,7 +97,7 @@ public class Artikel implements Serializable {
 		return this.status;
 	}
 
-	public void setVerkauft(Integer status) {
+	public void setStatus(Integer status) {
 		this.status = status;
 	}
 

@@ -43,15 +43,15 @@ public class KategorieArtikelListController extends AbstractController {
 	protected void postConstruct() {
 		getEntityManager().getTransaction().begin();
 		TypedQuery<Artikel> queryGames = getEntityManager().createQuery(
-				"SELECT a FROM Artikel a WHERE kategorie=1", Artikel.class);
+				"SELECT a FROM Artikel a WHERE kategorie=1 AND status=0", Artikel.class);
 		TypedQuery<Artikel> queryBooks = getEntityManager().createQuery(
-				"SELECT a FROM Artikel a WHERE kategorie=2", Artikel.class);
+				"SELECT a FROM Artikel a WHERE kategorie=2 AND status=0", Artikel.class);
 		TypedQuery<Artikel> queryApps = getEntityManager().createQuery(
-				"SELECT a FROM Artikel a WHERE kategorie=3", Artikel.class);
+				"SELECT a FROM Artikel a WHERE kategorie=3 AND status=0", Artikel.class);
 		TypedQuery<Artikel> queryMovies = getEntityManager().createQuery(
-				"SELECT a FROM Artikel a WHERE kategorie=4", Artikel.class);
+				"SELECT a FROM Artikel a WHERE kategorie=4 AND status=0", Artikel.class);
 		TypedQuery<Artikel> queryNewspaper = getEntityManager().createQuery(
-				"SELECT a FROM Artikel a WHERE kategorie=5", Artikel.class);
+				"SELECT a FROM Artikel a WHERE kategorie=5 AND status=0", Artikel.class);
 
 		artikellistgames = queryGames.getResultList();
 		artikellistbooks = queryBooks.getResultList();
@@ -60,7 +60,7 @@ public class KategorieArtikelListController extends AbstractController {
 		artikellistnewspaper = queryNewspaper.getResultList();
 		
 //		logger.info("size of artikellistgames:  "+artikellistgames.size());
-//		getEntityManager().getTransaction().commit();
+		getEntityManager().getTransaction().commit();
 	}
 	
 //	public String createAction() {
