@@ -94,7 +94,7 @@ INSERT INTO kategorien (kat_name, icon)
 	VALUES ('Newspaper', 'none');
 	
 INSERT INTO artikel (art_name, preis, slots, bild, beschreibung, kategorie, status) 
-	VALUES ('Fifa 98', '10.0', '8', 'none', 'Fussballspiel', '1','0');
+	VALUES ('Fifa 2012', '10.0', '8', '../resources/img/fifa12.jpg', 'Fussballspiel', '1','0');
 	
 INSERT INTO los (artikel_id, losnr, gewonnen, verkauft)
 	VALUES ('1', '1', 'false', 'false');
@@ -121,7 +121,7 @@ INSERT INTO los (artikel_id, losnr, gewonnen, verkauft)
 	VALUES ('1', '8', 'false', 'false');
 
 INSERT INTO artikel (art_name, preis, slots, bild, beschreibung, kategorie, status) 
-	VALUES ('NHL 2014', '100.0', '8', 'none', 'Eishockeyspiel', '1','0');
+	VALUES ('NHL 2014', '100.0', '8', '../resources/img/nhl14.jpg', 'Eishockeyspiel', '1','0');
 	
 INSERT INTO los (artikel_id, losnr, gewonnen, verkauft)
 	VALUES ('2', '1', 'false', 'false');
@@ -148,7 +148,7 @@ INSERT INTO los (artikel_id, losnr, gewonnen, verkauft)
 	VALUES ('2', '8', 'false', 'false');
 	
 INSERT INTO artikel (art_name, preis, slots, bild, beschreibung, kategorie, status) 
-	VALUES ('Harry Potter', '11.8', '8', 'none', 'Fantasy', '2','0');
+	VALUES ('Harry Potter', '11.8', '8', '../resources/img/Harrypotter.jpg', 'Fantasy', '2','0');
 	
 INSERT INTO los (artikel_id, losnr, gewonnen, verkauft)
 	VALUES ('3', '1', 'false', 'false');
@@ -175,7 +175,7 @@ INSERT INTO los (artikel_id, losnr, gewonnen, verkauft)
 	VALUES ('3', '8', 'false', 'false');
 	
 INSERT INTO artikel (art_name, preis, slots, bild, beschreibung, kategorie, status) 
-	VALUES ('Feuchtgebiete', '14.9', '8', 'none', 'Biographie', '2','0');
+	VALUES ('Feuchtgebiete', '14.9', '8', '../resources/img/feuchtgebiete18.png', 'Biographie', '2','0');
 	
 INSERT INTO los (artikel_id, losnr, gewonnen, verkauft)
 	VALUES ('4', '1', 'false', 'false');
@@ -202,7 +202,7 @@ INSERT INTO los (artikel_id, losnr, gewonnen, verkauft)
 	VALUES ('4', '8', 'false', 'false');
 	
 INSERT INTO artikel (art_name, preis, slots, bild, beschreibung, kategorie, status) 
-	VALUES ('Angry Birds', '3.2', '8', 'none', 'Vögel und Schweine', '3','0');
+	VALUES ('Angry Birds', '3.2', '8', '../resources/img/angrybirds.png', 'Vögel und Schweine', '3','0');
 	
 INSERT INTO los (artikel_id, losnr, gewonnen, verkauft)
 	VALUES ('5', '1', 'false', 'false');
@@ -229,7 +229,7 @@ INSERT INTO los (artikel_id, losnr, gewonnen, verkauft)
 	VALUES ('5', '8', 'false', 'false');
 	
 INSERT INTO artikel (art_name, preis, slots, bild, beschreibung, kategorie, status) 
-	VALUES ('Instagram', '2.5', '8', 'none', 'Social Media', '3','0');
+	VALUES ('Instagram', '2.5', '8', '../resources/img/instagram.png', 'Social Media', '3','0');
 
 INSERT INTO los (artikel_id, losnr, gewonnen, verkauft)
 	VALUES ('6', '1', 'false', 'false');
@@ -256,7 +256,7 @@ INSERT INTO los (artikel_id, losnr, gewonnen, verkauft)
 	VALUES ('6', '8', 'false', 'false');
 	
 INSERT INTO artikel (art_name, preis, slots, bild, beschreibung, kategorie, status) 
-	VALUES ('Pulp Fiction', '15', '8', 'none', 'Actionfilm', '4','0');
+	VALUES ('Pulp Fiction', '15', '8', '../resources/img/pulpfiction.jpg', 'Actionfilm', '4','0');
 	
 INSERT INTO los (artikel_id, losnr, gewonnen, verkauft)
 	VALUES ('7', '1', 'false', 'false');
@@ -283,7 +283,7 @@ INSERT INTO los (artikel_id, losnr, gewonnen, verkauft)
 	VALUES ('7', '8', 'false', 'false');
 	
 INSERT INTO artikel (art_name, preis, slots, bild, beschreibung, kategorie, status) 
-	VALUES ('Iron Man 2', '19', '8', 'none', 'Superheldenfilm', '4','0');
+	VALUES ('Iron Man 2', '19', '8', '../resources/img/ironman.png', 'Superheldenfilm', '4','0');
 	
 INSERT INTO los (artikel_id, losnr, gewonnen, verkauft)
 	VALUES ('8', '1', 'false', 'false');
@@ -310,7 +310,7 @@ INSERT INTO los (artikel_id, losnr, gewonnen, verkauft)
 	VALUES ('8', '8', 'false', 'false');
 	
 INSERT INTO artikel (art_name, preis, slots, bild, beschreibung, kategorie, status) 
-	VALUES ('Blick', '2.8', '8', 'none', 'Boulevardzeitung', '5','0');
+	VALUES ('Blick', '2.8', '8', '../resources/img/blick.jpg', 'Boulevardzeitung', '5','0');
 	
 INSERT INTO los (artikel_id, losnr, gewonnen, verkauft)
 	VALUES ('9', '1', 'false', 'false');
@@ -337,7 +337,7 @@ INSERT INTO los (artikel_id, losnr, gewonnen, verkauft)
 	VALUES ('9', '8', 'false', 'false');
 	
 INSERT INTO artikel (art_name, preis, slots, bild, beschreibung, kategorie, status) 
-	VALUES ('Suedostschweiz', '1.8', '8', 'none', 'Bündner Nachrichten', '5','0');
+	VALUES ('20 Minuten', '1.8', '8', '../resources/img/20min.png', 'Schundnachrichten', '5','0');
 	
 INSERT INTO los (artikel_id, losnr, gewonnen, verkauft)
 	VALUES ('10', '1', 'false', 'false');

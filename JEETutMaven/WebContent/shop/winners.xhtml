@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+<body>
+
+	<ui:composition template="../resources/template.xhtml">
+			
+			<ui:define name="login">
+					<div class="logincontainer" style="display:table;">
+		<div class="outerlogincont" style="display:table-row;">
+			<div class="piccontainer" style="display:table-cell; vertical-align:middle; background:white;">
+					<img src="../avatar.png" height="50" width="50"></img>
+			</div>
+			<div class="text" style="display:table-cell; vertical-align:middle;">
+					<p style="color:white; font-weight: bold;">Hallo, #{loginBean.userName}</p>
+					<h:form>
+					<h:commandLink style="color:white; font-weight:bold;" action="#{loginBean.logout}" value="Logout" />
+					</h:form>
+
+			</div>
+		</div>	
+	</div>
+			</ui:define>
+
+		<ui:define name="content-right">
+			<h:form>
+				<h:dataTable class="table"
+					value="#{winnerArtikelListController.winnerartikel}"
+					var="winnerartikel">
+					<h:column>
+						<f:facet name="header">Bild</f:facet>
+							<img src="#{winnerartikel.bild}"></img>
+    			</h:column>
+					<h:column>
+						<f:facet name="header">Artikelname</f:facet>
+					#{winnerartikel.artName}
+    			</h:column>
+					<h:column>
+						<f:facet name="header">Preis</f:facet>
+					#{winnerartikel.preis}
+    			</h:column>
+					<h:column>
+						<f:facet name="header">Beschreibung</f:facet>
+					#{winnerartikel.beschreibung}
+    			</h:column>
+    				<h:column>
+						<f:facet name="header">Los#</f:facet>
+					#{winnerArtikelListController.winner}
+    			</h:column>
+
+
+				</h:dataTable>
+			</h:form>
+		</ui:define>
+	</ui:composition>
+</body>
+</html>

@@ -8,6 +8,23 @@
 <body>
 
 	<ui:composition template="../resources/template.xhtml">
+			
+			<ui:define name="login">
+					<div class="logincontainer" style="display:table;">
+		<div class="outerlogincont" style="display:table-row;">
+			<div class="piccontainer" style="display:table-cell; vertical-align:middle; background:white;">
+					<img src="../avatar.png" height="50" width="50"></img>
+			</div>
+			<div class="text" style="display:table-cell; vertical-align:middle;">
+					<p style="color:white; font-weight: bold;">Hallo, #{loginBean.userName}</p>
+					<h:form>
+					<h:commandLink style="color:white; font-weight:bold;" action="#{loginBean.logout}" value="Logout" />
+					</h:form>
+
+			</div>
+		</div>	
+	</div>
+			</ui:define>
 
 		<ui:define name="content-right">
 			<h:form>
@@ -16,7 +33,7 @@
 					var="artikellistmovies">
 					<h:column>
 						<f:facet name="header">Bild</f:facet>
-					#{artikellistmovies.bild}
+															<img src="#{artikellistmovies.bild}"></img>
     			</h:column>
 					<h:column>
 						<f:facet name="header">Artikelname</f:facet>
