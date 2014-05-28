@@ -42,4 +42,9 @@ public class EntityManagerBean {
     public void preDestroy() {
     	entityManager.close();
     }
+
+	public void setEntityManager(EntityManager entityManager) {
+		this.entityManager = entityManager;
+	}
+	
 }

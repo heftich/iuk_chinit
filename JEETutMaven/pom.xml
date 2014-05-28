@@ -63,6 +63,23 @@
 		  <version>4.11</version>
 		  <scope>test</scope>
 		</dependency>
+
+		<!-- Jackson for JSON Processing -->
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-core</artifactId>
+			<version>2.3.3</version>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>2.3.3</version>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-annotations</artifactId>
+			<version>2.3.3</version>
+		</dependency>
 		
 		<!-- for JPA, use hibernate-entitymanager instead of hibernate-core -->
 		<dependency>

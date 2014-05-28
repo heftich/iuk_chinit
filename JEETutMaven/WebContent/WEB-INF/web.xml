@@ -49,4 +49,12 @@
 			<role-name>ADMIN</role-name>
 		</auth-constraint>
 	</security-constraint>
+	<servlet>
+ 	  	<servlet-name>BuyLosServlet</servlet-name>
+   		<servlet-class>ajaxServlets.BuyLosServlet</servlet-class>
+	</servlet>
+		<servlet-mapping>
+    	<servlet-name>BuyLosServlet</servlet-name>
+   		<url-pattern>/BuyLosServlet</url-pattern>
+	</servlet-mapping>
 </web-app>

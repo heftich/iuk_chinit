@@ -10,43 +10,34 @@
 	<ui:composition template="../resources/template.xhtml">
 
 		<ui:define name="content-right">
-			<h:form>
 				<h:dataTable class="table"
 					value="#{startController.artikelliststart}"
-					var="artikelliststart">
+					var="artikel">
 					<h:column>
 						<f:facet name="header">Bild</f:facet>
-					#{artikelliststart.bild}
+					#{artikel.bild}
     			</h:column>
 					<h:column>
 						<f:facet name="header">Artikelname</f:facet>
-					#{artikelliststart.artName}
+					#{artikel.artName}
     			</h:column>
  					<h:column>
     					<f:facet name="header">Preis</f:facet>
-					#{artikelliststart.preis}
+					#{artikel.preis}
     			</h:column>
 					<h:column>
 						<f:facet name="header">Beschreibung</f:facet>
-					#{artikelliststart.beschreibung}
+					#{artikel.beschreibung}
     			</h:column>
     			<h:column>
     				<f:facet name="header">Lose</f:facet>
     				
-    					<h:button name="action" value="1"></h:button>
-    					<h:button name="action" value="2"></h:button>
-    					<h:button name="action" value="3"></h:button>
-    					<h:button name="action" value="4"></h:button>   					
-    					<br>
-    					<h:button name="action" value="5"></h:button>
-    					<h:button name="action" value="6"></h:button>
-    					<h:button name="action" value="7"></h:button>
-    					<h:button name="action" value="8"></h:button>
-    					</br>
+    					<ui:repeat value="#{artikel.los}" var="los">
+						    <button class="losbutton" name="action" value="#{los.id}" >#{los.losnr}</button>
+						</ui:repeat>
     			</h:column>
     		
     			</h:dataTable>
-			</h:form>
 		</ui:define>
 		<!-- 	<ui:define name="footer"> -->
 		<!-- 	    Add your footer here or delete to use the default -->
